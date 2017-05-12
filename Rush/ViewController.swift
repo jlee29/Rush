@@ -24,14 +24,39 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        print("logged out")
+        print("Successfully logged out.")
     }
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if (error != nil) {
             print(error)
         }
-        print("worked")
+        print("Succesfully logged in.")
+        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email, picture"]).start { (connection, result, err) in
+            if err != nil {
+                print("Failed graph request")
+            }
+            if let data = result as? [String:Any] {
+                let dict = (data["picture"] as! NSDictionary)
+                let data2 = dict["data"] as! NSDictionary
+                _ = data2["url"] as! String?
+                print(data)
+//                self.uniqueID = data["id"] as! String?
+//                self.realname = data["name"] as! String?
+//                self.email = data["email"] as! String?
+//                self.updateDatabase(withID: self.uniqueID!, name: self.realname!, email: self.email!)
+//                // ns user defaults
+//                let defaults = UserDefaults.standard
+//                defaults.set(self.uniqueID, forKey: "userID")
+//                defaults.set(self.realname, forKey: "realName")
+//                defaults.set(self.email, forKey: "email")
+//                defaults.set(url!, forKey: "proPic")
+                //
+                let storyboard = self.storyboard!
+                let controller = storyboard.instantiateViewController(withIdentifier: "mainTabBar")
+                self.present(controller, animated: true, completion: nil)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
