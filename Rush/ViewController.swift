@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import Firebase
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
 
@@ -57,6 +58,21 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 self.present(controller, animated: true, completion: nil)
             }
         }
+        print("worked")
+        showEmailAddress()
+    }
+    
+    func showEmailAddress(){
+        let accessToken = FBSDKAccessToken.current()
+        guard let accessTokenString = accessToken?.tokenString else { return }
+        let credentials = FIRFacebookAuthProvider.credential(withAccessToken: accessTokenString)
+        FIRAuth.auth()?.signIn(with: credentials, completion: { (user, error) in
+            if error != nil {
+                print("Something went wrong with FB User", error ?? "")
+                return
+            }
+            print("Successfully logged in with user: ", user ?? "")
+        })
     }
 
     override func didReceiveMemoryWarning() {

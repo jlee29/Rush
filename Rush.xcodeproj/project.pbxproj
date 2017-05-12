@@ -15,6 +15,7 @@
 		87B138951EC64FAF008FB962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B138941EC64FAF008FB962 /* Assets.xcassets */; };
 		87B138981EC64FAF008FB962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */; };
 		87B63A581EC653A0000B08F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B63A571EC653A0000B08F1 /* Default-568h@2x.png */; };
+		C38BEA2D1EC65B5D00D265DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		87B63A571EC653A0000B08F1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		87B63A591EC656C9000B08F1 /* Rush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rush.entitlements; sourceTree = "<group>"; };
 		8CAC46C7C3BB1C16E548A25A /* Pods_Rush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F13527E016F605140CA928C9 /* Pods-Rush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rush/Pods-Rush.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 				87B1388E1EC64FAF008FB962 /* Main.storyboard */,
 				87B138941EC64FAF008FB962 /* Assets.xcassets */,
 				87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */,
+				C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */,
 				87B138991EC64FAF008FB962 /* Info.plist */,
 				87B138911EC64FAF008FB962 /* Rush.xcdatamodeld */,
 			);
@@ -166,6 +169,7 @@
 			files = (
 				87B138981EC64FAF008FB962 /* LaunchScreen.storyboard in Resources */,
 				87B63A581EC653A0000B08F1 /* Default-568h@2x.png in Resources */,
+				C38BEA2D1EC65B5D00D265DF /* GoogleService-Info.plist in Resources */,
 				87B138951EC64FAF008FB962 /* Assets.xcassets in Resources */,
 				87B138901EC64FAF008FB962 /* Main.storyboard in Resources */,
 			);
@@ -201,7 +205,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		95BA5DECEAD2D9655D6809CD /* [CP] Embed Pods Frameworks */ = {
