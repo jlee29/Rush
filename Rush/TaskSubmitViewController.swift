@@ -19,11 +19,14 @@ class TaskSubmitViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submit(_ sender: UIButton) {
         if descTextField.text! != "", priceTextField.text! != "", isValidPrice(priceTextField.text!) {
-            //let dateFormatter = DateFormatter()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = DateFormatter.Style.short
+            dateFormatter.timeStyle = DateFormatter.Style.short
+            let strDate = dateFormatter.string(from: timePicker.date)
+            
             let price = priceTextField.text!
             let description = descTextField.text!
-            let time = timePicker.description
-            rushModel.submitToDatabase(with: description, time: time, price: Double(price)!)
+            rushModel.submitToDatabase(with: description, time: strDate, price: Double(price)!)
         } else {
             showAlert()
         }
