@@ -10,11 +10,8 @@ import Foundation
 import Firebase
 
 struct RushModel {
-    func submitToDatabase(with location: String, time: String, price: Double) {
-        print(location)
-        print(time)
-        print(price)
-        let hashVal = (time + location + String(price)).hashValue
+    func submitToDatabase(with desc: String, time: String, price: Double) {
+        let hashVal = (time + desc + String(price)).hashValue
         let ref = FIRDatabase.database().reference()
         let defaults = UserDefaults.standard
         let name = defaults.string(forKey: "realName")
@@ -24,7 +21,7 @@ struct RushModel {
         
         userInfo.child("name").setValue(name)
         
-        requestInfo.child("location").setValue(location)
+        requestInfo.child("description").setValue(desc)
         requestInfo.child("time").setValue(time)
         requestInfo.child("price").setValue(price)
         

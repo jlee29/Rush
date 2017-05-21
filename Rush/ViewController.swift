@@ -44,13 +44,12 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 let defaults = UserDefaults.standard
                 defaults.set(data["name"] as! String?, forKey: "realName")
                 defaults.set(data["email"] as! String?, forKey: "email")
+                defaults.set("true", forKey: "loggedIn")
                 let storyboard = self.storyboard!
                 let controller = storyboard.instantiateViewController(withIdentifier: "mainTabBar")
                 self.present(controller, animated: true, completion: nil)
             }
         }
-        print("worked")
-        showEmailAddress()
     }
     
     func showEmailAddress(){
