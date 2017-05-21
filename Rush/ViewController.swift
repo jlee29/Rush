@@ -41,18 +41,9 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 let dict = (data["picture"] as! NSDictionary)
                 let data2 = dict["data"] as! NSDictionary
                 _ = data2["url"] as! String?
-                print(data)
-//                self.uniqueID = data["id"] as! String?
-//                self.realname = data["name"] as! String?
-//                self.email = data["email"] as! String?
-//                self.updateDatabase(withID: self.uniqueID!, name: self.realname!, email: self.email!)
-//                // ns user defaults
-//                let defaults = UserDefaults.standard
-//                defaults.set(self.uniqueID, forKey: "userID")
-//                defaults.set(self.realname, forKey: "realName")
-//                defaults.set(self.email, forKey: "email")
-//                defaults.set(url!, forKey: "proPic")
-                //
+                let defaults = UserDefaults.standard
+                defaults.set(data["name"] as! String?, forKey: "realName")
+                defaults.set(data["email"] as! String?, forKey: "email")
                 let storyboard = self.storyboard!
                 let controller = storyboard.instantiateViewController(withIdentifier: "mainTabBar")
                 self.present(controller, animated: true, completion: nil)

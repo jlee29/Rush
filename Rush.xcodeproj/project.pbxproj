@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		355919E323E802D0104C942E /* Pods_Rush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC46C7C3BB1C16E548A25A /* Pods_Rush.framework */; };
+		873C5C691ED11B1A0045CF66 /* TaskSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */; };
+		873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C6A1ED11E5B0045CF66 /* RushModel.swift */; };
 		87B1388B1EC64FAF008FB962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B1388A1EC64FAF008FB962 /* AppDelegate.swift */; };
 		87B1388D1EC64FAF008FB962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B1388C1EC64FAF008FB962 /* ViewController.swift */; };
 		87B138901EC64FAF008FB962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B1388E1EC64FAF008FB962 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		47BEC3BF8FC5B7A95F875160 /* Pods-Rush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rush/Pods-Rush.debug.xcconfig"; sourceTree = "<group>"; };
+		873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSubmitViewController.swift; sourceTree = "<group>"; };
+		873C5C6A1ED11E5B0045CF66 /* RushModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushModel.swift; sourceTree = "<group>"; };
 		87B138871EC64FAF008FB962 /* Rush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B1388A1EC64FAF008FB962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B1388C1EC64FAF008FB962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				87B1388A1EC64FAF008FB962 /* AppDelegate.swift */,
 				87B1388C1EC64FAF008FB962 /* ViewController.swift */,
 				87B1388E1EC64FAF008FB962 /* Main.storyboard */,
+				873C5C6A1ED11E5B0045CF66 /* RushModel.swift */,
+				873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */,
 				87B138941EC64FAF008FB962 /* Assets.xcassets */,
 				87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */,
 				C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */,
@@ -205,7 +211,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		95BA5DECEAD2D9655D6809CD /* [CP] Embed Pods Frameworks */ = {
@@ -230,9 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */,
 				87B1388D1EC64FAF008FB962 /* ViewController.swift in Sources */,
 				87B1388B1EC64FAF008FB962 /* AppDelegate.swift in Sources */,
 				87B138931EC64FAF008FB962 /* Rush.xcdatamodeld in Sources */,
+				873C5C691ED11B1A0045CF66 /* TaskSubmitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

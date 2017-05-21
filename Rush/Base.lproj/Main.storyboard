@@ -50,7 +50,7 @@
         <!--Request-->
         <scene sceneID="i0Q-ts-jGf">
             <objects>
-                <viewController id="MRL-1T-bUu" sceneMemberID="viewController">
+                <viewController id="MRL-1T-bUu" customClass="TaskSubmitViewController" customModule="Rush" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gR4-ZB-kUx"/>
                         <viewControllerLayoutGuide type="bottom" id="WbQ-Vj-wJL"/>
@@ -63,41 +63,48 @@
                                 <rect key="frame" x="16" y="28" width="343" height="582"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pt-BP-m2B">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="97"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="83"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TYx-sL-Y6E">
-                                        <rect key="frame" x="0.0" y="97" width="343" height="97"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLl-V6-0DE">
-                                        <rect key="frame" x="0.0" y="194" width="343" height="97"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a72-8X-v79">
-                                        <rect key="frame" x="0.0" y="291" width="343" height="97"/>
+                                        <rect key="frame" x="0.0" y="83" width="343" height="83.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compensation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-3a-cLV">
-                                        <rect key="frame" x="0.0" y="388" width="343" height="97"/>
+                                        <rect key="frame" x="0.0" y="166.5" width="343" height="83"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNQ-iG-O4H">
-                                        <rect key="frame" x="0.0" y="485" width="343" height="97"/>
+                                        <rect key="frame" x="0.0" y="249.5" width="343" height="83"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Deadline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLl-V6-0DE">
+                                        <rect key="frame" x="0.0" y="332.5" width="343" height="83"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ve7-gx-s2v">
+                                        <rect key="frame" x="0.0" y="415.5" width="343" height="83.5"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="517020790.59306598">
+                                            <!--2017-05-21 00:53:10 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvF-c3-RGb">
+                                        <rect key="frame" x="0.0" y="499" width="343" height="83"/>
+                                        <state key="normal" title="Submit!"/>
+                                        <connections>
+                                            <action selector="submit:" destination="MRL-1T-bUu" eventType="touchUpInside" id="t6V-Nz-IUj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -110,6 +117,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Request" id="Riu-9P-01A"/>
+                    <connections>
+                        <outlet property="descTextField" destination="TYx-sL-Y6E" id="bG6-yi-GAr"/>
+                        <outlet property="priceTextField" destination="lNQ-iG-O4H" id="8lL-zX-1gN"/>
+                        <outlet property="timePicker" destination="ve7-gx-s2v" id="YGB-Q8-Izh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEg-0p-lke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
