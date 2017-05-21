@@ -14,11 +14,21 @@ struct RushModel {
         print(location)
         print(time)
         print(price)
+        let hashVal = (time + location + String(price)).hashValue
         let ref = FIRDatabase.database().reference()
         let defaults = UserDefaults.standard
         let name = defaults.string(forKey: "realName")
         let email = defaults.string(forKey: "email")
-        ref.child(encodeFirebaseKey(inputStr: email!)).setValue(name)
+        let userInfo = ref.child(encodeFirebaseKey(inputStr: email!)).child("userinfo")
+        let requestInfo = ref.child(encodeFirebaseKey(inputStr: email!)).child("requests").child(String(hashVal))
+        
+        userInfo.child("name").setValue(name)
+        
+        requestInfo.child("location").setValue(location)
+        requestInfo.child("time").setValue(time)
+        requestInfo.child("price").setValue(price)
+        
+        
     }
     func encodeFirebaseKey(inputStr: String) -> String {
         var newStr = inputStr
