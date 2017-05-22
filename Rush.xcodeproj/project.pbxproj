@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		355919E323E802D0104C942E /* Pods_Rush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC46C7C3BB1C16E548A25A /* Pods_Rush.framework */; };
+		8703E2681ED2619B00647ED6 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703E2671ED2619B00647ED6 /* OrdersTableViewController.swift */; };
+		8703E26A1ED261AB00647ED6 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703E2691ED261AB00647ED6 /* OrderTableViewCell.swift */; };
 		873C5C691ED11B1A0045CF66 /* TaskSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */; };
 		873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C6A1ED11E5B0045CF66 /* RushModel.swift */; };
 		873C5C6D1ED12CCE0045CF66 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */; };
 		87B1388B1EC64FAF008FB962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B1388A1EC64FAF008FB962 /* AppDelegate.swift */; };
 		87B1388D1EC64FAF008FB962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B1388C1EC64FAF008FB962 /* ViewController.swift */; };
 		87B138901EC64FAF008FB962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B1388E1EC64FAF008FB962 /* Main.storyboard */; };
-		87B138931EC64FAF008FB962 /* Rush.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87B138911EC64FAF008FB962 /* Rush.xcdatamodeld */; };
 		87B138951EC64FAF008FB962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B138941EC64FAF008FB962 /* Assets.xcassets */; };
 		87B138981EC64FAF008FB962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */; };
 		87B63A581EC653A0000B08F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B63A571EC653A0000B08F1 /* Default-568h@2x.png */; };
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		47BEC3BF8FC5B7A95F875160 /* Pods-Rush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rush/Pods-Rush.debug.xcconfig"; sourceTree = "<group>"; };
+		8703E2671ED2619B00647ED6 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		8703E2691ED261AB00647ED6 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSubmitViewController.swift; sourceTree = "<group>"; };
 		873C5C6A1ED11E5B0045CF66 /* RushModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushModel.swift; sourceTree = "<group>"; };
 		873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +33,6 @@
 		87B1388A1EC64FAF008FB962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B1388C1EC64FAF008FB962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		87B1388F1EC64FAF008FB962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		87B138921EC64FAF008FB962 /* Rush.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rush.xcdatamodel; sourceTree = "<group>"; };
 		87B138941EC64FAF008FB962 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87B138971EC64FAF008FB962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87B138991EC64FAF008FB962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,6 +90,8 @@
 				87B1388A1EC64FAF008FB962 /* AppDelegate.swift */,
 				87B1388C1EC64FAF008FB962 /* ViewController.swift */,
 				87B1388E1EC64FAF008FB962 /* Main.storyboard */,
+				8703E2671ED2619B00647ED6 /* OrdersTableViewController.swift */,
+				8703E2691ED261AB00647ED6 /* OrderTableViewCell.swift */,
 				873C5C6A1ED11E5B0045CF66 /* RushModel.swift */,
 				873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */,
 				873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */,
@@ -95,7 +99,6 @@
 				87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */,
 				C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */,
 				87B138991EC64FAF008FB962 /* Info.plist */,
-				87B138911EC64FAF008FB962 /* Rush.xcdatamodeld */,
 			);
 			path = Rush;
 			sourceTree = "<group>";
@@ -241,9 +244,10 @@
 			files = (
 				873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */,
 				873C5C6D1ED12CCE0045CF66 /* MapViewController.swift in Sources */,
+				8703E2681ED2619B00647ED6 /* OrdersTableViewController.swift in Sources */,
+				8703E26A1ED261AB00647ED6 /* OrderTableViewCell.swift in Sources */,
 				87B1388D1EC64FAF008FB962 /* ViewController.swift in Sources */,
 				87B1388B1EC64FAF008FB962 /* AppDelegate.swift in Sources */,
-				87B138931EC64FAF008FB962 /* Rush.xcdatamodeld in Sources */,
 				873C5C691ED11B1A0045CF66 /* TaskSubmitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,19 +421,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		87B138911EC64FAF008FB962 /* Rush.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				87B138921EC64FAF008FB962 /* Rush.xcdatamodel */,
-			);
-			currentVersion = 87B138921EC64FAF008FB962 /* Rush.xcdatamodel */;
-			path = Rush.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 87B1387F1EC64FAF008FB962 /* Project object */;
 }

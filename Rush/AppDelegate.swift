@@ -52,7 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let rootViewController = self.window!.rootViewController
                 let storyboard = rootViewController?.storyboard
                 let controller = storyboard?.instantiateViewController(withIdentifier: "mainTabBar")
-                rootViewController?.present(controller!, animated: true, completion: nil)
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                //show window
+                appDelegate.window?.rootViewController = controller
+                //rootViewController?.present(controller!, animated: true, completion: nil)
             }
         }
     }
