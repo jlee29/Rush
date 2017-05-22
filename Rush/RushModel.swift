@@ -25,21 +25,24 @@ struct RushModel {
         requestInfo.child("time").setValue(time)
         requestInfo.child("price").setValue(price)
     }
-    func retrieveFromDatabase(){
+    func retrieveFromDatabase() -> [Order]{
         let defaults = UserDefaults.standard
         _ = defaults.string(forKey: "realName")
         let email = defaults.string(forKey: "email")
-        ref.child(encodeFirebaseKey(inputStr: email!)).observeSingleEvent(of: .value, with: { (snapshot) in
-            print("cat")
-            print(snapshot.value ?? "none")
-            
+        var orderList = [Order]()
+        ref.child(encodeFirebaseKey(inputStr: email!)).child("requests").observeSingleEvent(of: .value, with: { (snapshot) in
+            let testOrder = Order(with: "cat", orderPrice: 8.9, orderLocation: "dog")
+            print(testOrder)
             for child in snapshot.children.allObjects as! [FIRDataSnapshot] {
-                print(child)
+                let value = child.value as? NSDictionary
+                let newOrder = Order(with: value?["description"] as! String, orderPrice: value?["price"] as! Double, orderLocation: "Stanford")
+                orderList.append(newOrder)
             }
             // ...
         }) { (error) in
             print(error.localizedDescription)
         }
+        return orderList
         
     }
     func encodeFirebaseKey(inputStr: String) -> String {
