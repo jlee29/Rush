@@ -27,6 +27,7 @@ class TaskSubmitViewController: UIViewController, UITextFieldDelegate {
             let price = priceTextField.text!
             let description = descTextField.text!
             rushModel.submitToDatabase(with: description, time: strDate, price: Double(price)!)
+            rushModel.retrieveFromDatabase()
         } else {
             showAlert()
         }
