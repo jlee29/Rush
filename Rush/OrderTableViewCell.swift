@@ -14,6 +14,14 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
+    var order: Order? {
+        didSet {
+            descLabel.text = order?.desc
+            priceLabel.text = String(describing: order?.price)
+            locationLabel.text = order?.location
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

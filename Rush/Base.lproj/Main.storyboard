@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="1064.8" y="41.829085457271368"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="8uP-hZ-7zR">
             <objects>
-                <tabBarController storyboardIdentifier="mainTabBar" id="3Jo-qJ-tyu" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBar" id="3Jo-qJ-tyu" customClass="MainTabBarViewController" customModule="Rush" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="4Ls-rU-f6Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -149,7 +149,7 @@
         <!--Explore-->
         <scene sceneID="HEu-j7-JEA">
             <objects>
-                <tableViewController id="jW5-kF-g6E" sceneMemberID="viewController">
+                <tableViewController id="jW5-kF-g6E" customClass="OrdersTableViewController" customModule="Rush" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" id="JR4-ZA-4X8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

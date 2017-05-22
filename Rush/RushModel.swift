@@ -31,8 +31,6 @@ struct RushModel {
         let email = defaults.string(forKey: "email")
         var orderList = [Order]()
         ref.child(encodeFirebaseKey(inputStr: email!)).child("requests").observeSingleEvent(of: .value, with: { (snapshot) in
-            let testOrder = Order(with: "cat", orderPrice: 8.9, orderLocation: "dog")
-            print(testOrder)
             for child in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 let value = child.value as? NSDictionary
                 let newOrder = Order(with: value?["description"] as! String, orderPrice: value?["price"] as! Double, orderLocation: "Stanford")

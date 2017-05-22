@@ -20,6 +20,7 @@
 		87B138951EC64FAF008FB962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B138941EC64FAF008FB962 /* Assets.xcassets */; };
 		87B138981EC64FAF008FB962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */; };
 		87B63A581EC653A0000B08F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B63A571EC653A0000B08F1 /* Default-568h@2x.png */; };
+		87E257C01ED2707A003D7A69 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E257BF1ED2707A003D7A69 /* MainTabBarViewController.swift */; };
 		C38BEA2D1EC65B5D00D265DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		87B138991EC64FAF008FB962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87B63A571EC653A0000B08F1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		87B63A591EC656C9000B08F1 /* Rush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rush.entitlements; sourceTree = "<group>"; };
+		87E257BF1ED2707A003D7A69 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		8CAC46C7C3BB1C16E548A25A /* Pods_Rush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F13527E016F605140CA928C9 /* Pods-Rush.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rush.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rush/Pods-Rush.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				87B1388C1EC64FAF008FB962 /* ViewController.swift */,
 				87B1388E1EC64FAF008FB962 /* Main.storyboard */,
 				8703E2671ED2619B00647ED6 /* OrdersTableViewController.swift */,
+				87E257BF1ED2707A003D7A69 /* MainTabBarViewController.swift */,
 				8703E2691ED261AB00647ED6 /* OrderTableViewCell.swift */,
 				873C5C6A1ED11E5B0045CF66 /* RushModel.swift */,
 				873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */,
@@ -248,6 +251,7 @@
 				873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */,
 				873C5C6D1ED12CCE0045CF66 /* MapViewController.swift in Sources */,
 				8703E26C1ED2675C00647ED6 /* Order.swift in Sources */,
+				87E257C01ED2707A003D7A69 /* MainTabBarViewController.swift in Sources */,
 				8703E2681ED2619B00647ED6 /* OrdersTableViewController.swift in Sources */,
 				8703E26A1ED261AB00647ED6 /* OrderTableViewCell.swift in Sources */,
 				87B1388D1EC64FAF008FB962 /* ViewController.swift in Sources */,
