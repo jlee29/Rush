@@ -10,6 +10,7 @@
 		355919E323E802D0104C942E /* Pods_Rush.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAC46C7C3BB1C16E548A25A /* Pods_Rush.framework */; };
 		8703E2681ED2619B00647ED6 /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703E2671ED2619B00647ED6 /* OrdersTableViewController.swift */; };
 		8703E26A1ED261AB00647ED6 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703E2691ED261AB00647ED6 /* OrderTableViewCell.swift */; };
+		8703E26C1ED2675C00647ED6 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8703E26B1ED2675C00647ED6 /* Order.swift */; };
 		873C5C691ED11B1A0045CF66 /* TaskSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */; };
 		873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C6A1ED11E5B0045CF66 /* RushModel.swift */; };
 		873C5C6D1ED12CCE0045CF66 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */; };
@@ -26,6 +27,7 @@
 		47BEC3BF8FC5B7A95F875160 /* Pods-Rush.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rush.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rush/Pods-Rush.debug.xcconfig"; sourceTree = "<group>"; };
 		8703E2671ED2619B00647ED6 /* OrdersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
 		8703E2691ED261AB00647ED6 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		8703E26B1ED2675C00647ED6 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSubmitViewController.swift; sourceTree = "<group>"; };
 		873C5C6A1ED11E5B0045CF66 /* RushModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushModel.swift; sourceTree = "<group>"; };
 		873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				8703E2691ED261AB00647ED6 /* OrderTableViewCell.swift */,
 				873C5C6A1ED11E5B0045CF66 /* RushModel.swift */,
 				873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */,
+				8703E26B1ED2675C00647ED6 /* Order.swift */,
 				873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */,
 				87B138941EC64FAF008FB962 /* Assets.xcassets */,
 				87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */,
@@ -244,6 +247,7 @@
 			files = (
 				873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */,
 				873C5C6D1ED12CCE0045CF66 /* MapViewController.swift in Sources */,
+				8703E26C1ED2675C00647ED6 /* Order.swift in Sources */,
 				8703E2681ED2619B00647ED6 /* OrdersTableViewController.swift in Sources */,
 				8703E26A1ED261AB00647ED6 /* OrderTableViewCell.swift in Sources */,
 				87B1388D1EC64FAF008FB962 /* ViewController.swift in Sources */,

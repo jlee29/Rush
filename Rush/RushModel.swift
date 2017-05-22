@@ -27,7 +27,7 @@ struct RushModel {
     }
     func retrieveFromDatabase(){
         let defaults = UserDefaults.standard
-        let name = defaults.string(forKey: "realName")
+        _ = defaults.string(forKey: "realName")
         let email = defaults.string(forKey: "email")
         ref.child(encodeFirebaseKey(inputStr: email!)).observeSingleEvent(of: .value, with: { (snapshot) in
             print("cat")
