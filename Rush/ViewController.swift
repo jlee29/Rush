@@ -33,17 +33,22 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             print(error)
         }
         print("Succesfully logged in.")
-        FBSDKGraphRequest(graphPath: "/me", parameters: ["fields": "id, name, email, picture"]).start { (connection, result, err) in
+        let deviceScale = Int(UIScreen.main.scale)
+        let width = 200 * deviceScale
+        let height = 200 * deviceScale
+        let parameters = ["fields": "id, name, email, picture.width(\(width)).height(\(height))"]
+        FBSDKGraphRequest(graphPath: "/me", parameters: parameters).start { (connection, result, err) in
             if err != nil {
                 print("Failed graph request")
             }
             if let data = result as? [String:Any] {
                 let dict = (data["picture"] as! NSDictionary)
                 let data2 = dict["data"] as! NSDictionary
-                _ = data2["url"] as! String?
+                let url = data2["url"] as! String?
                 let defaults = UserDefaults.standard
                 defaults.set(data["name"] as! String?, forKey: "realName")
                 defaults.set(data["email"] as! String?, forKey: "email")
+                defaults.set(url!, forKey: "proPicURL")
                 defaults.set("true", forKey: "loggedIn")
                 let storyboard = self.storyboard!
                 let controller = storyboard.instantiateViewController(withIdentifier: "mainTabBar")

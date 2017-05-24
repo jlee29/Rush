@@ -16,6 +16,7 @@ class MainTabBarViewController: UITabBarController {
         let rushModel = RushModel()
         let orders = rushModel.retrieveFromDatabase()
         orderTVC.orders = orders
+        print("view did load")
         // Do any additional setup after loading the view.
     }
 

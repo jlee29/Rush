@@ -19,7 +19,6 @@ class OrdersTableViewController: UITableViewController {
     }
 
     override func viewDidLoad() {
-        print("view did load")
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

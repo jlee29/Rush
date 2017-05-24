@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class TaskSubmitViewController: UIViewController, UITextFieldDelegate {
+class TaskSubmitViewController: UIViewController, UITextFieldDelegate, MapViewControllerDelegate {
 
     @IBOutlet weak var descTextField: UITextField!
     @IBOutlet weak var timePicker: UIDatePicker!
@@ -62,15 +62,17 @@ class TaskSubmitViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let destinationViewController = segue.destination
+        if let mapViewController = destinationViewController as? MapViewController {
+            mapViewController.delegate = self
+        }
     }
-    */
+    
+    func updatedLocation(with latitude: Double, longitude: Double) {
+        print(latitude)
+        print(longitude)
+    }
 
 }
 
