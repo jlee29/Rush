@@ -37,11 +37,9 @@ struct RushModel {
                 let newOrder = Order(with: value?["description"] as! String, orderPrice: value?["price"] as! Double, orderLocation: "Stanford")
                 orderList.append(newOrder)
             }
-            print(orderList)
         }) { (error) in
             print(error.localizedDescription)
         }
-        print(orderList)
         return orderList
         
     }
