@@ -30,15 +30,18 @@ struct RushModel {
         _ = defaults.string(forKey: "realName")
         let email = defaults.string(forKey: "email")
         var orderList = [Order]()
+        // TODO: the method below is running asynchronously and causing the returned order list to be empty :(
         ref.child(encodeFirebaseKey(inputStr: email!)).child("requests").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 let value = child.value as? NSDictionary
                 let newOrder = Order(with: value?["description"] as! String, orderPrice: value?["price"] as! Double, orderLocation: "Stanford")
                 orderList.append(newOrder)
             }
+            print(orderList)
         }) { (error) in
             print(error.localizedDescription)
         }
+        print(orderList)
         return orderList
         
     }
