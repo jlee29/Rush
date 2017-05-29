@@ -15,13 +15,13 @@
 		873C5C691ED11B1A0045CF66 /* TaskSubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */; };
 		873C5C6B1ED11E5B0045CF66 /* RushModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C6A1ED11E5B0045CF66 /* RushModel.swift */; };
 		873C5C6D1ED12CCE0045CF66 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */; };
+		875068AD1EDC00730071756C /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 875068AC1EDC00730071756C /* pin.png */; };
 		87B1388B1EC64FAF008FB962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B1388A1EC64FAF008FB962 /* AppDelegate.swift */; };
 		87B1388D1EC64FAF008FB962 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B1388C1EC64FAF008FB962 /* ViewController.swift */; };
 		87B138901EC64FAF008FB962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B1388E1EC64FAF008FB962 /* Main.storyboard */; };
 		87B138951EC64FAF008FB962 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87B138941EC64FAF008FB962 /* Assets.xcassets */; };
 		87B138981EC64FAF008FB962 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87B138961EC64FAF008FB962 /* LaunchScreen.storyboard */; };
 		87B63A581EC653A0000B08F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B63A571EC653A0000B08F1 /* Default-568h@2x.png */; };
-		87B9C21C1EDBF3E9002F7015 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B9C21B1EDBF3E9002F7015 /* pin.png */; };
 		87E257C01ED2707A003D7A69 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E257BF1ED2707A003D7A69 /* MainTabBarViewController.swift */; };
 		C38BEA2D1EC65B5D00D265DF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -35,6 +35,7 @@
 		873C5C681ED11B1A0045CF66 /* TaskSubmitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskSubmitViewController.swift; sourceTree = "<group>"; };
 		873C5C6A1ED11E5B0045CF66 /* RushModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RushModel.swift; sourceTree = "<group>"; };
 		873C5C6C1ED12CCE0045CF66 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		875068AC1EDC00730071756C /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = Art/pin.png; sourceTree = "<group>"; };
 		87B138871EC64FAF008FB962 /* Rush.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rush.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87B1388A1EC64FAF008FB962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87B1388C1EC64FAF008FB962 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		87B138991EC64FAF008FB962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87B63A571EC653A0000B08F1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		87B63A591EC656C9000B08F1 /* Rush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rush.entitlements; sourceTree = "<group>"; };
-		87B9C21B1EDBF3E9002F7015 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pin.png; path = ../../../../../../Downloads/pin.png; sourceTree = "<group>"; };
 		87E257BF1ED2707A003D7A69 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		8CAC46C7C3BB1C16E548A25A /* Pods_Rush.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rush.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38BEA2C1EC65B5D00D265DF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		87B138891EC64FAF008FB962 /* Rush */ = {
 			isa = PBXGroup;
 			children = (
-				87B9C21A1EDBF3D8002F7015 /* Art */,
+				875068AC1EDC00730071756C /* pin.png */,
 				87B63A591EC656C9000B08F1 /* Rush.entitlements */,
 				87B1388A1EC64FAF008FB962 /* AppDelegate.swift */,
 				87B1388C1EC64FAF008FB962 /* ViewController.swift */,
@@ -113,14 +113,6 @@
 				87B138991EC64FAF008FB962 /* Info.plist */,
 			);
 			path = Rush;
-			sourceTree = "<group>";
-		};
-		87B9C21A1EDBF3D8002F7015 /* Art */ = {
-			isa = PBXGroup;
-			children = (
-				87B9C21B1EDBF3E9002F7015 /* pin.png */,
-			);
-			name = Art;
 			sourceTree = "<group>";
 		};
 		D8A5E710706613895E98000E /* Frameworks */ = {
@@ -202,7 +194,7 @@
 				87B138981EC64FAF008FB962 /* LaunchScreen.storyboard in Resources */,
 				87B63A581EC653A0000B08F1 /* Default-568h@2x.png in Resources */,
 				C38BEA2D1EC65B5D00D265DF /* GoogleService-Info.plist in Resources */,
-				87B9C21C1EDBF3E9002F7015 /* pin.png in Resources */,
+				875068AD1EDC00730071756C /* pin.png in Resources */,
 				87B138951EC64FAF008FB962 /* Assets.xcassets in Resources */,
 				87B138901EC64FAF008FB962 /* Main.storyboard in Resources */,
 			);
