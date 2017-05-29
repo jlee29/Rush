@@ -23,7 +23,6 @@ class TaskSubmitViewController: UIViewController, UITextFieldDelegate, MapViewCo
             dateFormatter.dateStyle = DateFormatter.Style.short
             dateFormatter.timeStyle = DateFormatter.Style.short
             let strDate = dateFormatter.string(from: timePicker.date)
-            
             let price = priceTextField.text!
             let description = descTextField.text!
             rushModel.submitToDatabase(with: description, time: strDate, price: Double(price)!)
