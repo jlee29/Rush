@@ -168,7 +168,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-aH-6cO">
                                 <rect key="frame" x="16" y="64" width="343" height="554"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="88o-pE-gJi">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="88o-pE-gJi">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="554"/>
                                     </mapView>
                                 </subviews>

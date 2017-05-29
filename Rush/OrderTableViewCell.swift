@@ -16,9 +16,9 @@ class OrderTableViewCell: UITableViewCell {
     
     var order: Order? {
         didSet {
-            descLabel.text = order?.desc
-            priceLabel.text = String(describing: order?.price)
-            locationLabel.text = order?.location
+            descLabel.text = order!.desc
+            priceLabel.text = "\(order!.price)"
+            locationLabel.text = "temp - fill in"
         }
     }
     
