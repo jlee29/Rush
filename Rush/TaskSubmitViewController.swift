@@ -40,7 +40,10 @@ class TaskSubmitViewController: UIViewController, UITextFieldDelegate, MapViewCo
     }
     
     private func isValidPrice(_ price: String) -> Double? {
-        return 2.0
+        if let converted = Double(price) {
+            return converted
+        }
+        return nil
     }
     
     override func viewDidLoad() {
@@ -96,3 +99,4 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
