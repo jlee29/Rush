@@ -11,7 +11,7 @@ import Firebase
 
 struct RushModel {
     let ref = FIRDatabase.database().reference()
-    func submitToDatabase(with desc: String, time: String, price: Double) {
+    func submitToDatabase(with desc: String, time: String, price: Double, longitude: Double, latitude: Double) {
         let hashVal = (time + desc + String(price)).hashValue
         let defaults = UserDefaults.standard
         let name = defaults.string(forKey: "realName")
@@ -24,6 +24,8 @@ struct RushModel {
         requestInfo.child("description").setValue(desc)
         requestInfo.child("time").setValue(time)
         requestInfo.child("price").setValue(price)
+        requestInfo.child("longitude").setValue(longitude)
+        requestInfo.child("latitude").setValue(latitude)
     }
     func retrieveFromDatabase(handler: @escaping ([Order])->()) { // takes a handler from list of orders to void.
         print("beginning database retrieval")
@@ -31,11 +33,14 @@ struct RushModel {
         _ = defaults.string(forKey: "realName")
         let email = defaults.string(forKey: "email")
         var orderList = [Order]()
-        // TODO: the method below is running asynchronously and causing the returned order list to be empty :(
+        // TODO: the method below is running asynchronously and causing the returned order list to be empty 😞
         ref.child(encodeFirebaseKey(inputStr: email!)).child("requests").observeSingleEvent(of: .value, with: { (snapshot) in
             for child in snapshot.children.allObjects as! [FIRDataSnapshot] {
                 let value = child.value as? NSDictionary
-                let newOrder = Order(with: value?["description"] as! String, orderPrice: value?["price"] as! Double, orderLocation: "Stanford")
+                let newOrder = Order(with: value?["description"] as! String,
+                                     orderPrice: value?["price"] as! Double,
+                                     orderLongitude: value?["longitude"] as! Double,
+                                     orderLatitude: value?["latitude"] as! Double)
                 orderList.append(newOrder)
             }
             print("done retrieving data")
@@ -45,6 +50,7 @@ struct RushModel {
         }
         
     }
+
     func encodeFirebaseKey(inputStr: String) -> String {
         var newStr = inputStr
         newStr = inputStr.replacingOccurrences(of: ".", with: "😍")

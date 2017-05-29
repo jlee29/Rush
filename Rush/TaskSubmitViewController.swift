@@ -15,24 +15,32 @@ class TaskSubmitViewController: UIViewController, UITextFieldDelegate, MapViewCo
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var priceTextField: UITextField!
     
+    private var latitude: Double?
+    private var longitude: Double?
+    
     private var rushModel = RushModel()
     
     @IBAction func submit(_ sender: UIButton) {
-        if descTextField.text! != "", priceTextField.text! != "", isValidPrice(priceTextField.text!) {
+        if (allFieldsFilledIn()) {
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = DateFormatter.Style.short
             dateFormatter.timeStyle = DateFormatter.Style.short
             let strDate = dateFormatter.string(from: timePicker.date)
             let price = priceTextField.text!
             let description = descTextField.text!
-            rushModel.submitToDatabase(with: description, time: strDate, price: Double(price)!)
+            rushModel.submitToDatabase(with: description, time: strDate, price: Double(price)!, longitude: self.longitude!, latitude: self.latitude!)
         } else {
             showAlert()
         }
     }
     
-    private func isValidPrice(_ price: String) -> Bool {
-        return true
+    private func allFieldsFilledIn() -> Bool {
+        return (descTextField.text! != "" && priceTextField.text! != "" && isValidPrice(priceTextField.text!) != nil
+            && self.longitude != nil && self.latitude != nil)
+    }
+    
+    private func isValidPrice(_ price: String) -> Double? {
+        return 2.0
     }
     
     override func viewDidLoad() {
@@ -69,6 +77,8 @@ class TaskSubmitViewController: UIViewController, UITextFieldDelegate, MapViewCo
     }
     
     func updatedLocation(with latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
         print(latitude)
         print(longitude)
     }
