@@ -26,6 +26,7 @@ struct RushModel {
         requestInfo.child("price").setValue(price)
     }
     func retrieveFromDatabase(handler: @escaping ([Order])->()) { // takes a handler from list of orders to void.
+        print("beginning database retrieval")
         let defaults = UserDefaults.standard
         _ = defaults.string(forKey: "realName")
         let email = defaults.string(forKey: "email")

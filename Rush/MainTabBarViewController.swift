@@ -28,7 +28,6 @@ class MainTabBarViewController: UITabBarController {
     
     func handleOrderRetrieval(orderList: [Order] ) {
         orderTVC?.orders = orderList
-        print(orderList)
     }
     
 
