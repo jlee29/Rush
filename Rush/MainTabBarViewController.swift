@@ -9,13 +9,14 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
-
+    private var orderTVC: OrdersTableViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let orderTVC = self.childViewControllers[0] as! OrdersTableViewController
+        orderTVC = self.childViewControllers[0] as? OrdersTableViewController
         let rushModel = RushModel()
-        let orders = rushModel.retrieveFromDatabase()
-        orderTVC.orders = orders
+        rushModel.retrieveFromDatabase(handler: handleOrderRetrieval)
+
         print("view did load")
         // Do any additional setup after loading the view.
     }
@@ -23,6 +24,11 @@ class MainTabBarViewController: UITabBarController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func handleOrderRetrieval(orderList: [Order] ) {
+        orderTVC?.orders = orderList
+        print(orderList)
     }
     
 

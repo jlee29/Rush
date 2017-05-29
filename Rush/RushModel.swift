@@ -25,7 +25,7 @@ struct RushModel {
         requestInfo.child("time").setValue(time)
         requestInfo.child("price").setValue(price)
     }
-    func retrieveFromDatabase() -> [Order]{
+    func retrieveFromDatabase(handler: @escaping ([Order])->()) { // takes a handler from list of orders to void.
         let defaults = UserDefaults.standard
         _ = defaults.string(forKey: "realName")
         let email = defaults.string(forKey: "email")
@@ -37,10 +37,11 @@ struct RushModel {
                 let newOrder = Order(with: value?["description"] as! String, orderPrice: value?["price"] as! Double, orderLocation: "Stanford")
                 orderList.append(newOrder)
             }
+            print("done retrieving data")
+            handler(orderList)
         }) { (error) in
             print(error.localizedDescription)
         }
-        return orderList
         
     }
     func encodeFirebaseKey(inputStr: String) -> String {
