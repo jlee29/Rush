@@ -42,6 +42,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
                 print("Failed graph request")
             }
             if let data = result as? [String:Any] {
+                print(data["friendrequests"] ?? "no requests found") // lol
                 let dict = (data["picture"] as! NSDictionary)
                 let data2 = dict["data"] as! NSDictionary
                 let url = data2["url"] as! String?
