@@ -15,7 +15,7 @@ class MainTabBarViewController: UITabBarController {
         super.viewDidLoad()
         orderTVC = self.childViewControllers[0] as? OrdersTableViewController
         let rushModel = RushModel()
-        rushModel.retrieveFromDatabase(handler: handleOrderRetrieval)
+        rushModel.retrieveFromDatabaseForAll(handler: handleOrderRetrieval)
 
         print("view did load")
         // Do any additional setup after loading the view.

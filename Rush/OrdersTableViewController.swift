@@ -15,6 +15,7 @@ class OrdersTableViewController: UITableViewController {
     var orders = Array<Order>() {
         didSet {
             tableView.reloadData()
+            print("loaded fresh orders, reloaded table")
         }
     }
 
