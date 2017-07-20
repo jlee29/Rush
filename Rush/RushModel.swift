@@ -11,7 +11,8 @@ import Firebase
 
 struct RushModel {
     let ref = FIRDatabase.database().reference()
-    func submitToDatabase(with desc: String, time: String, price: Double, longitude: Double, latitude: Double) {
+    
+    func writeToDatabase(desc: String, time: String, price: Double, longitude: Double, latitude: Double) {
         let hashVal = (time + desc + String(price)).hashValue
         let defaults = UserDefaults.standard
         let name = defaults.string(forKey: "realName")
@@ -27,6 +28,7 @@ struct RushModel {
         requestInfo.child("longitude").setValue(longitude)
         requestInfo.child("latitude").setValue(latitude)
     }
+
     func retrieveFromDatabaseForEmails(handler: @escaping ([Order])->(), emails: [String]) { // takes a handler from list of orders to void.
         if(emails.count == 0) {
             print("no emails received")
@@ -84,7 +86,7 @@ struct RushModel {
         print("completed execution")
     }
     
-
+    func 
     func encodeFirebaseKey(inputStr: String) -> String {
         var newStr = inputStr
         newStr = inputStr.replacingOccurrences(of: ".", with: "😍")
